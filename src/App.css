@@ -1,0 +1,139 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin: 2rem 0 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #c41e3a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(196, 30, 58, 0.1);
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+  margin: 0 0.5rem;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #e75480;
+  font-style: italic;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(196, 30, 58, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.celebration-content {
+  text-align: center;
+  color: white;
+  animation: bounceIn 0.5s ease-out;
+}
+
+.celebration-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.celebration-content p {
+  font-size: 1.5rem;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding-top: 3rem;
+  text-align: center;
+  color: #c41e3a;
+  font-style: italic;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .celebration-content h2 {
+    font-size: 2rem;
+  }
+
+  .celebration-content p {
+    font-size: 1.2rem;
+  }
+}
