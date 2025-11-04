@@ -99,12 +99,47 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
+## Deploying to GitHub Pages
+
+This project is configured to deploy to GitHub Pages automatically!
+
+### Automatic Deployment (Recommended)
+
+The project includes a GitHub Actions workflow that automatically deploys when you push to the main branch.
+
+1. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Click `Settings` → `Pages`
+   - Under "Build and deployment", set Source to `GitHub Actions`
+
+2. **Push your changes**:
+   ```bash
+   git add .
+   git commit -m "Update scavenger hunt"
+   git push origin main
+   ```
+
+3. **Access your site**:
+   - Your site will be live at: `https://jaigarg314.github.io/FourYearAnniversary/`
+   - The deployment takes about 1-2 minutes
+
+### Manual Deployment
+
+Alternatively, you can deploy manually:
+
+```bash
+npm run deploy
+```
+
+This will build and deploy directly to the `gh-pages` branch.
+
 ## Tips
 
 1. **Test all riddles**: Make sure all answers work correctly (they're case-insensitive)
 2. **Personalize it**: Add specific memories, inside jokes, and personal touches
 3. **Set up the prize**: Have the actual prize ready before starting the hunt!
 4. **Mobile friendly**: Your partner can complete it on their phone
+5. **Preview before sharing**: Test the deployed version before sending the link!
 
 ## Made with Love ❤️
 
