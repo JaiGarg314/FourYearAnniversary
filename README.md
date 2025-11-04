@@ -101,37 +101,42 @@ The built files will be in the `dist/` directory.
 
 ## Deploying to GitHub Pages
 
-This project is configured to deploy to GitHub Pages automatically!
+This project is configured to deploy to GitHub Pages from the `gh-pages` branch!
 
-### Automatic Deployment (Recommended)
-
-The project includes a GitHub Actions workflow that automatically deploys when you push to the main branch.
+### Setup Steps
 
 1. **Enable GitHub Pages**:
-   - Go to your repository on GitHub
+   - Go to your repository: https://github.com/jaigarg314/FourYearAnniversary
    - Click `Settings` → `Pages`
-   - Under "Build and deployment", set Source to `GitHub Actions`
+   - Under "Build and deployment":
+     - Set **Source** to `Deploy from a branch`
+     - Set **Branch** to `gh-pages` and folder to `/ (root)`
+   - Click **Save**
 
-2. **Push your changes**:
+2. **Deploy your site**:
    ```bash
-   git add .
-   git commit -m "Update scavenger hunt"
-   git push origin main
+   npm run deploy
    ```
 
 3. **Access your site**:
    - Your site will be live at: `https://jaigarg314.github.io/FourYearAnniversary/`
-   - The deployment takes about 1-2 minutes
+   - First deployment may take 1-2 minutes
 
-### Manual Deployment
+### Updating Your Site
 
-Alternatively, you can deploy manually:
+Whenever you make changes:
 
 ```bash
+git add .
+git commit -m "Update scavenger hunt"
+git push origin main
 npm run deploy
 ```
 
-This will build and deploy directly to the `gh-pages` branch.
+The `npm run deploy` command will:
+- Build your React app
+- Push the built files to the `gh-pages` branch
+- Automatically update your live site
 
 ## Tips
 
